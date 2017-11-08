@@ -1,5 +1,5 @@
 
-public class Tabel extends AbstractElem{
+public class Tabel implements Element{
 
 	private String tabel;
     
@@ -17,4 +17,29 @@ public class Tabel extends AbstractElem{
     {
         return tabel;
     }
+
+	public void add(Element el) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void remove(Element el) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Element getChild(int child) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void acceptVis(Visitor v) {
+		v.visitTabel(this);
+		System.out.println("Tabel vizitat.");
+	}
+
+	public void afisareEl() {
+		// TODO Auto-generated method stub
+		
+	}
 }

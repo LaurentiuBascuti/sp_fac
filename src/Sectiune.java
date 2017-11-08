@@ -25,15 +25,18 @@ private ArrayList<Element> continut;
         System.out.println("Works");
     }
 
-	@Override
 	public Element getChild(int child) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public void afisareEl() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public void acceptVis(Visitor v) {
+		v.visitSectiune(this);
+		System.out.println("Sectiune vizitata.");
 	}
 }

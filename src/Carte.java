@@ -38,5 +38,11 @@ public class Carte {
 			cop.afisareEl();
 		}	
 	}
+	
+	public void accept(Visitor v){
+		for(Element e : continut){
+			e.acceptVis(v);
+		}
+	}
     
 }

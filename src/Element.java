@@ -5,6 +5,7 @@ public interface Element {
 	public void remove(Element el);
 	public Element getChild(int child);
 	
+	public void acceptVis(Visitor v);
 	public void print();
 	public void afisareEl();
 }
