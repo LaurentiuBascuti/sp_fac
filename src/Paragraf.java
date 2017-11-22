@@ -20,9 +20,9 @@ public class Paragraf implements Element{
         as.printAligned(paragraf);
     }
      
-    public String toString()
+    public void afisareparagraf()
     {
-        return paragraf;
+        System.out.println(paragraf);
     }
 
 	public void add(Element el) {
@@ -49,5 +49,6 @@ public class Paragraf implements Element{
 		// TODO Auto-generated method stub
 		
 	}
+	
     
 }
