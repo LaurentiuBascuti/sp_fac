@@ -1,10 +1,9 @@
 
-public class Imagine implements Element{
+public class Imagine extends SubjectElement{
 
 	private String img;
-	private int nrimag;
-
-    public Imagine(String img)
+	
+	public Imagine(String img)
     {
         this.img = img;
     }
@@ -20,8 +19,7 @@ public class Imagine implements Element{
     }
 
 	public void add(Element el) {
-		// TODO Auto-generated method stub
-		
+		notify2();
 	}
 
 	public void remove(Element el) {
@@ -36,7 +34,6 @@ public class Imagine implements Element{
 
 	public void acceptVis(Visitor v) {
 		v.visitImg(this);
-		nrimag++;
 		System.out.println("Imagine vizitata.");
 	}
 

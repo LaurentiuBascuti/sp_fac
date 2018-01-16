@@ -1,9 +1,11 @@
 import AlignStrategy.AlignStrategy;
+import textSpecial.TextSpecialInt;
 
-public class Paragraf implements Element{
+public class Paragraf extends SubjectElement{
 
 	private String paragraf;
     private AlignStrategy as;
+	private TextSpecialInt txtspec;
     
     public Paragraf(String paragraf)
     {
@@ -15,6 +17,13 @@ public class Paragraf implements Element{
         this.as = as;
     }
        
+    public void setTxtSpecial(TextSpecialInt txtspec){
+    	this.txtspec = txtspec;
+    }
+    
+    public void printTxt(){
+    	txtspec.printST(paragraf);
+    }
     public void print()
     {
         as.printAligned(paragraf);
@@ -26,8 +35,7 @@ public class Paragraf implements Element{
     }
 
 	public void add(Element el) {
-		// TODO Auto-generated method stub
-		
+		notify2();
 	}
 
 	public void remove(Element el) {
@@ -48,6 +56,14 @@ public class Paragraf implements Element{
 	public void afisareEl() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public TextSpecialInt getTxtspec() {
+		return txtspec;
+	}
+
+	public void setTxtspec(TextSpecialInt txtspec) {
+		this.txtspec = txtspec;
 	}
 	
     

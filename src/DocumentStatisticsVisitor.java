@@ -5,10 +5,14 @@ public class DocumentStatisticsVisitor implements Visitor{
 	    private int numarParagrafe = 0;
 	    private int numarImagini = 0;
 	    private int numarSectiuni = 0;
-	    private int numarProxImg = 0;
+	    private int numarTextSpecial = 0;
+	    
+		public void visitTextSpecial(TextSpecial txtspec) {
+			numarTextSpecial++;
+		}
 	    
 		public void visitIP(ImagineProxy imgp) {
-			numarProxImg++;
+			numarImagini++;
 		}
 		
 		public void visitImg(Imagine img) {
@@ -27,6 +31,10 @@ public class DocumentStatisticsVisitor implements Visitor{
 			numarSectiuni++;
 		}
     
+		public int getNumarTextSpecial(){
+			return numarTextSpecial;
+		}
+		
 		public int getNumarTabele() {
 			return numarTabele;
 		}
@@ -43,7 +51,4 @@ public class DocumentStatisticsVisitor implements Visitor{
 			return numarSectiuni;
 		}
 
-		public int getNumarProxImg() {
-			return numarProxImg;
-		}
 }

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Sectiune implements Element{
+public class Sectiune extends SubjectElement{
 
 private ArrayList<Element> continut;
     
@@ -11,6 +11,7 @@ private ArrayList<Element> continut;
 
     public void add(Element x) {
         continut.add(x);
+        notify2();
     }
 
     public void remove(Element x) {

@@ -1,5 +1,5 @@
 
-public class Tabel implements Element{
+public class Tabel extends SubjectElement{
 
 	private String tabel;
     
@@ -19,8 +19,7 @@ public class Tabel implements Element{
     }
 
 	public void add(Element el) {
-		// TODO Auto-generated method stub
-		
+		notify2();
 	}
 	
 	public void remove(Element el) {
